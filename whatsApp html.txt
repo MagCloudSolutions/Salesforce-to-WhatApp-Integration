@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="For Whatsapp Message">
+        <div class="slds-align_absolute-center" style="background-color: aqua;">   
+      <lightning-button variant="brand" label="Click Me!" title="Successful action" onclick={handleClick} ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

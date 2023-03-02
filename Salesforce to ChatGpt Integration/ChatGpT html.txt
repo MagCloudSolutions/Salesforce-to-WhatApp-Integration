@@ -1,0 +1,22 @@
+<template>
+    <lightning-modal-header label="WelCome in ChatGpt"></lightning-modal-header>
+    <lightning-modal-body> 
+        <lightning-card title="ChatGPT">
+            <template if:true={showSpinner}>
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </template>
+            <div class="slds-p-horizontal_x-small">
+            <lightning-input type="text" id="searchTerm" placeholder="Please enter search term here..." onkeydown={handleEnterKey}></lightning-input>
+            </div>
+            <template if:true={searchResultChatGPT}>
+                <div class="slds-p-horizontal_x-small">
+                <lightning-formatted-rich-text disable-linkify value={searchResultChatGPT}></lightning-formatted-rich-text>
+            </div>
+        </template>
+        </lightning-card>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="OK" onclick={handleOkay} class="slds-align_absolute-center"></lightning-button>
+    </lightning-modal-footer>
+</template>
+
